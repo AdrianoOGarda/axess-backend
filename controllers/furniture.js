@@ -1,7 +1,7 @@
 const Furniture = require("../models/Furniture")
 
 exports.createFurniture = async(req, res) => {
-    const { name, description, image1, image2, image3, image4, measurements, kind, category } = req.body;
+    const { name, description, image1, image2, image3, size, category, project } = req.body;
     const furniture = await Furniture.create({
         ...req.body
     })
@@ -9,7 +9,7 @@ exports.createFurniture = async(req, res) => {
 }
 
 exports.updateFurniture = async(req, res) => {
-    const { name, description, image1, image2, image3, image4, measurements, kind, category } = req.body;
+    const { name, description, image1, image2, image3, size, category, project } = req.body;
     const { furnitureId } = req.params;
     const furniture = await Furniture.findByIdAndUpdate(furnitureId, {
         ...req.body

@@ -12,77 +12,55 @@ const furnitureSchema = new Schema({
     image1: String,
     image2: String,
     image3: String,
-    image4: String,
-    measurements: String,
-    kind: {
-        en: {
-            type: String,
-            enum: [
-                "Chairs",
-                "Sofas",
-                "Recliners",
-                "Coffee Tables",
-                "Benches",
-                "Dining Tables",
-                "Arm Chairs",
-                "Bar stools",
-                "Beds",
-                "Nightstands",
-                "Dressers",
-                "Chests",
-                "Mirrors",
-                "Desks",
-                "Cabinets",
-                "Bookcases"
-            ]
-        },
+    size: {
+        en: String,
+        es: String,
+    },
+    category: {
         es: {
             type: String,
             enum: [
-                "Sillas",
-                "Sofas",
-                "Reclinadores",
-                "Mesas de Café",
-                "Bancas",
-                "Mesas de Comedor",
-                "Sillones",
-                "Taburetes",
-                "Camas",
-                "Mesitas de Noche",
-                "Aparadores",
-                "Cofres",
-                "Espejos",
-                "Escritorios",
-                "Armarios",
-                "Libreros"
+                "CAMAS",
+                "BUROS",
+                "CREDENZAS",
+                "BANCOS (DE COCINA)",
+                "SILLAS PARA COMEDOR",
+                "COMEDORES",
+                "SOFAS",
+                "MESAS DE CENTRO",
+                "SILLAS LATERALES",
+                "MUEBLES DE TV",
+                "SILLAS DE EXTERIOR",
+                "COMEDORES DE EXTERIOR",
+                "SILLAS LOUNGE",
+                "CAMASTROS",
+                "MESAS LATERALES EXTERIOR",
+                "SALAS DE EXTERIOR"
+            ]
+        },
+        en: {
+            type: String,
+            enum: [
+                "BEDS",
+                "NIGHTSTANDS",
+                "CREDENZAS",
+                "HIGH CHAIRS (KITCHEN)",
+                "DINING CHAIRS",
+                "DINING TABLES",
+                "SOFAS",
+                "COFFEE TABLES",
+                "SIDE CHAIRS",
+                "TV STANDS",
+                "OUTDOOR CHAIRS",
+                "OUTDOOR DINING TABLES",
+                "LOUNGE CHAIRS",
+                "SUNBEDS",
+                "OUTDOOR SIDE TABLES",
+                "OUTDOOR SOFAS"
             ]
         }
     },
-    category: {
-        en: {
-            type: String,
-            enum: [
-                "Bedroom",
-                "Bathroom",
-                "Living Room",
-                "Dining Room",
-                "Kitchen",
-                "Laundry"
-            ]
-        },
-        es: {
-            type: String,
-            enum: [
-                "Dormitorio",
-                "Baño",
-                "Sala",
-                "Comedor",
-                "Cocina",
-                "Cuarto de Lavado"
-
-            ]
-        }
-    }
+    project: String,
 }, {
     timestamps: true,
 });
