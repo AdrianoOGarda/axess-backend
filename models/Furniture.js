@@ -16,6 +16,7 @@ const furnitureSchema = new Schema({
         en: String,
         es: String,
     },
+    price: Number,
     category: {
         es: {
             type: String,
