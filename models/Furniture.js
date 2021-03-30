@@ -9,9 +9,7 @@ const furnitureSchema = new Schema({
         en: String,
         es: String,
     },
-    image1: String,
-    image2: String,
-    image3: String,
+    image: String,
     size: {
         en: String,
         es: String,
