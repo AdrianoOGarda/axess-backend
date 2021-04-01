@@ -14,7 +14,11 @@ const furnitureSchema = new Schema({
         en: String,
         es: String,
     },
-    price: Number,
+    price: String,
+    material: {
+        en: String,
+        es: String,
+    },
     category: {
         es: {
             type: String,
@@ -59,7 +63,10 @@ const furnitureSchema = new Schema({
             ]
         }
     },
-    project: String,
+    project: {
+        type: String,
+        enum: ["AWA"]
+    },
 }, {
     timestamps: true,
 });
