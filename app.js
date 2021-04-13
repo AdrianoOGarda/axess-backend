@@ -14,7 +14,7 @@ const passport = require('./config/passport');
 const { setLocals } = require("./middlewares")
 
 mongoose
-    .connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect(process.env.DB_PROD, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((x) => console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`))
     .catch((err) => console.error('Error connecting to mongo', err));
 
@@ -26,7 +26,7 @@ const app = express();
 app.use(
     cors({
         credentials: true,
-        origin: [process.env.FRONTENDPOINT]
+        origin: ["https://axess-design.web.app", "http://localhost:3001", process.env.FRONTENDPOINT]
     })
 );
 
