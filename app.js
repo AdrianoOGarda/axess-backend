@@ -26,7 +26,7 @@ const app = express();
 app.use(
     cors({
         credentials: true,
-        origin: ["https://axess-design.herokuapp.com", "http://localhost:3001", "http://192.168.1.136:3001",
+        origin: ["http://axess-design.herokuapp.com", "http://localhost:3001", "http://192.168.1.136:3001",
             process.env.FRONTENDPOINT
         ]
     })
